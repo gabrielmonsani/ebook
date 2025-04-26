@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Emagrecimento Consciente 40+</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap"
+          rel="stylesheet">
+    <style>
+        body {
+            font-family: \'Inter\', sans-serif;
+        }
+
+        h1, h2, h3 {
+            font-family: \'Playfair Display\', serif;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideLeftRight {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animate-horizontal {
+            display: flex;
+            animation: slideLeftRight 20s linear infinite;
+        }
+
+        .animate-horizontal .dep {
+            flex: 0 0 auto;
+            min-width: 320px;
+        }
+
+        @media (max-width: 767px) {
+            .animate-horizontal {
+                animation-duration: 20s;
+            }
+        }
+
+    </style>
+
+</head>
+<body class="bg-gradient-to-b from-green-50 via-white to-blue-50 text-gray-800">
+
+<nav class="hidden md:block fixed w-full top-0 bg-white/90 backdrop-blur-md z-50 shadow-xl">
+    <div class="container px-6 py-4 flex justify-end items-center">
+        <div>
+            <a href="#beneficios" class="mx-4 text-lg hover:text-green-600 transition-colors">Benefícios</a>
+            <a href="#depoimentos" class="mx-4 text-lg hover:text-green-600 transition-colors">Depoimentos</a>
+            <a href="#compra"
+               class="mx-4 bg-red-600 text-white py-2 px-6 rounded-full text-lg font-semibold hover:bg-red-700 transition-shadow shadow-lg">Comprar</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Conquistas Section -->
+<section class="pt-32 pb-20 text-center px-6 fade-in">
+    <h1 class="text-6xl md:text-7xl font-bold text-green-800 mb-6 drop-shadow-lg pulse">
+        Redescubra seu corpo e sua confiança aos 40+
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-600 mb-10 mx-auto max-w-2xl">
+        Método cientificamente validado que já ajudou +500 mulheres maduras a emagrecer sem efeito sanfona.
+    </p>
+    <a href="#compra"
+       class="bg-red-600 text-white py-4 px-16 rounded-full text-2xl font-semibold shadow-2xl hover:bg-red-700 transition-all transform hover:scale-110">
+        Quero meu eBook
+    </a>
+    <div class="mt-6 text-sm text-gray-500">Pagamento seguro via PIX, cartão e boleto.</div>
+</section>
+
+<!-- Autora Section -->
+<section class="py-16 bg-white px-6 fade-in">
+    <div class="container mx-auto max-w-4xl text-center">
+        <h2 class="text-3xl font-semibold mb-6">Sobre a Autora</h2>
+        <div class="flex flex-col md:flex-row items-center">
+            <img src="./assets/imagem1.png" alt="Foto da autora"
+                 class="rounded-full aspect-square w-40 h-40 object-cover mb-6 md:mb-0 md:mr-8 shadow-xl"/>
+            <div class="text-gray-700 text-xl">
+                <p class="italic mb-4">“Sou nutricionista especializada em saúde da mulher madura, com 10 anos de
+                    experiência e mais de 1.000 alunas satisfeitas.”</p>
+                <p>Criei este método após anos de pesquisa em endocrinologia do envelhecimento e nutrição
+                    comportamental.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const end = new Date(new Date().setHours(23, 59, 59, 999));
+    const timer = () => {
+        const now = new Date(), diff = end - now;
+        if (diff < 0) return document.getElementById('countdown').innerHTML = "00:00:00";
+        const h = String(Math.floor(diff / 3600000)).padStart(2, '0'),
+            m = String(Math.floor(diff % 3600000 / 60000)).padStart(2, '0'),
+            s = String(Math.floor(diff % 60000 / 1000)).padStart(2, '0');
+        document.getElementById('countdown').innerHTML = `${h}:${m}:${s}`;
+    };
+    setInterval(timer, 1000);
+</script>
+
+<!-- Benefícios Section -->
+<section id="beneficios" class="py-20 px-6 fade-in">
+    <h2 class="text-4xl text-center font-bold text-green-800 mb-12">
+        Conquiste a Sua Melhor Versão
+    </h2>
+    <div class="grid md:grid-cols-4 gap-10 max-w-5xl mx-auto">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow">
+            <div class="text-6xl text-green-500 mb-5">🔥</div>
+            <h3 class="text-2xl font-semibold mb-3">Metabolismo Ativo</h3>
+            <p class="text-lg">Queime gordura o dia todo com protocolos cientificamente comprovados.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow">
+            <div class="text-6xl text-blue-500 mb-5">🥗</div>
+            <h3 class="text-2xl font-semibold mb-3">Refeições Irresistíveis</h3>
+            <p class="text-lg">Planos alimentares práticos e deliciosos para sua rotina pós-40.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow">
+            <div class="text-6xl text-pink-500 mb-5">💆‍♀️</div>
+            <h3 class="text-2xl font-semibold mb-3">Equilíbrio Emocional</h3>
+            <p class="text-lg">Práticas de mindfulness para motivá-la e reduzir o estresse.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow">
+            <div class="text-6xl text-red-500 mb-5">🏋️</div>
+            <h3 class="text-2xl font-semibold mb-3">Treino Dinâmico</h3>
+            <p class="text-lg">Atividades especialmente selecionadas para impulsionar seu desempenho.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Depoimentos Section -->
+<section id="depoimentos" class="py-20 bg-gray-50 px-6 fade-in">
+    <h2 class="text-4xl text-center font-bold text-green-800 mb-12">Transformações Reais</h2>
+    <div class="relative overflow-hidden w-full">
+        <div class="flex animate-horizontal gap-8">
+            <!-- Depoimento 1 -->
+            <div class="dep flex-none w-80 bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
+                <img src="./assets/imagem2.jpg" alt="Mariana, 45 anos" class="w-full h-60 object-cover"/>
+                <div class="p-6">
+                    <p class="italic mb-4 text-lg">“Perdi 12kg sem sacrifícios e recuperei minha autoestima!”</p>
+                    <div class="font-bold text-xl">Mariana, 45 anos</div>
+                </div>
+            </div>
+            <!-- Depoimento 2 -->
+            <div class="dep flex-none w-80 bg-white rounded-2l shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
+                <img src="./assets/imagem4.jpg" alt="Cláudia, 52 anos" class="w-full h-60 object-cover"/>
+                <div class="p-6">
+                    <p class="italic mb-4 text-lg">“Sinto-me mais leve e feliz. Parecia impossível antes!”</p>
+                    <div class="font-bold text-xl">Cláudia, 52 anos</div>
+                </div>
+            </div>
+            <!-- Depoimento 3 -->
+            <div class="dep flex-none w-80 bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
+                <img src="./assets/imagem3.jpg" alt="Sônia, 48 anos" class="w-full h-60 object-cover"/>
+                <div class="p-6">
+                    <p class="italic mb-4 text-lg">“Meu corpo e mente agradecem. Recomendo fortemente!”</p>
+                    <div class="font-bold text-xl">Sônia, 48 anos</div>
+                </div>
+            </div>
+            <!-- Depoimento 4 -->
+            <div class="dep flex-none w-80 bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
+                <img src="./assets/imagem5.jpg" alt="Luciana, 50 anos" class="w-full h-60 object-cover"/>
+                <div class="p-6">
+                    <p class="italic mb-4 text-lg">“Nunca pensei que seria tão fácil emagrecer depois dos 40!”</p>
+                    <div class="font-bold text-xl">Luciana, 50 anos</div>
+                </div>
+            </div>
+            <!-- Depoimento 5 -->
+            <div class="dep flex-none w-80 bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
+                <img src="assets/imagem6.jpg" alt="Renata, 53 anos" class="w-full h-60 object-cover"/>
+                <div class="p-6">
+                    <p class="italic mb-4 text-lg">“Recuperei minha saúde e autoestima com esse processo!”</p>
+                    <div class="font-bold text-xl">Renata, 53 anos</div>
+                </div>
+            </div>
+            <!-- Depoimento 6 -->
+            <div class="dep flex-none w-80 bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
+                <img src="assets/imagem7.jpg" alt="Tatiane, 49 anos" class="w-full h-60 object-cover"/>
+                <div class="p-6">
+                    <p class="italic mb-4 text-lg">“O processo foi mais fácil do que eu imaginava, e os resultados são
+                        visíveis!”</p>
+                    <div class="font-bold text-xl">Tatiane, 49 anos</div>
+                </div>
+            </div>
+            <!-- Depoimento 7 -->
+            <div class="dep flex-none w-80 bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
+                <img src="./assets/imagem8.jpg" alt="Patrícia, 47 anos" class="w-full h-60 object-cover"/>
+                <div class="p-6">
+                    <p class="italic mb-4 text-lg">“A sensação de bem-estar aumentou muito. Estou mais feliz e
+                        saudável!”</p>
+                    <div class="font-bold text-xl">Patrícia, 47 anos</div>
+                </div>
+            </div>
+
+            <!-- Repete os depoimentos para criar um efeito de carrossel infinito -->
+            <div class="dep flex-none w-80 bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
+                <img src="./assets/imagem2.jpg" alt="Mariana, 45 anos" class="w-full h-60 object-cover"/>
+                <div class="p-6">
+                    <p class="italic mb-4 text-lg">“Perdi 12kg sem sacrifícios e recuperei minha autoestima!”</p>
+                    <div class="font-bold text-xl">Mariana, 45 anos</div>
+                </div>
+            </div>
+            <div class="dep flex-none w-80 bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
+                <img src="./assets/imagem4.jpg" alt="Cláudia, 52 anos" class="w-full h-60 object-cover"/>
+                <div class="p-6">
+                    <p class="italic mb-4 text-lg">“Sinto-me mais leve e feliz. Parecia impossível antes!”</p>
+                    <div class="font-bold text-xl">Cláudia, 52 anos</div>
+                </div>
+            </div>
+            <div class="dep flex-none w-80 bg-white rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
+                <img src="./assets/imagem3.jpg" alt="Sônia, 48 anos" class="w-full h-60 object-cover"/>
+                <div class="p-6">
+                    <p class="italic mb-4 text-lg">“Meu corpo e mente agradecem. Recomendo fortemente!”</p>
+                    <div class="font-bold text-xl">Sônia, 48 anos</div>
+                </div>
+            </div>
+            <div class="dep flex-none w-80 bg-white rounded-2l overflow-hidden transform hover:scale-105 transition-transform">
+                <img src="./assets/imagem5.jpg" alt="Luciana, 50 anos" class="w-full h-60 object-cover"/>
+                <div class="p-6">
+                    <p class="italic mb-4 text-lg">“Me sinto revitalizada e com mais disposição para o dia a dia!”</p>
+                    <div class="font-bold text-xl">Luciana, 50 anos</div>
+                </div>
+            </div>
+            <div class="dep flex-none w-80 bg-white rounded-2l overflow-hidden transform hover:scale-105 transition-transform">
+                <img src="assets/imagem6.jpg" alt="Renata, 53 anos" class="w-full h-60 object-cover"/>
+                <div class="p-6">
+                    <p class="italic mb-4 text-lg">“Recuperei minha saúde e autoestima com esse processo!”</p>
+                    <div class="font-bold text-xl">Renata, 53 anos</div>
+                </div>
+            </div>
+            <div class="dep flex-none w-80 bg-white rounded-2l overflow-hidden transform hover:scale-105 transition-transform">
+                <img src="assets/imagem7.jpg" alt="Tatiane, 49 anos" class="w-full h-60 object-cover"/>
+                <div class="p-6">
+                    <p class="italic mb-4 text-lg">“O processo foi mais fácil do que eu imaginava, e os resultados são
+                        visíveis!”</p>
+                    <div class="font-bold text-xl">Tatiane, 49 anos</div>
+                </div>
+            </div>
+            <div class="dep flex-none w-80 bg-white rounded-2l overflow-hidden transform hover:scale-105 transition-transform">
+                <img src="./assets/imagem8.jpg" alt="Patrícia, 47 anos" class="w-full h-60 object-cover"/>
+                <div class="p-6">
+                    <p class="italic mb-4 text-lg">“A sensação de bem-estar aumentou muito. Estou mais feliz e
+                        saudável!”</p>
+                    <div class="font-bold text-xl">Patrícia, 47 anos</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Garantia Section -->
+<section class="py-20 text-center px-6 fade-in">
+    <div class="max-w-xl mx-auto bg-white p-10 rounded-2xl shadow-2xl">
+        <h2 class="text-3xl font-semibold mb-4">Garantia Incondicional de 7 Dias</h2>
+        <p class="text-lg mb-6">Sem riscos: se não gostar dos resultados, reembolsamos 100% do seu pagamento.</p>
+        <div class="text-green-600 font-bold text-2xl">Sua satisfação garantida!</div>
+    </div>
+</section>
+
+<!-- Call to Action Final Section -->
+<section id="compra"
+         class="bg-gradient-to-r from-red-600 to-red-800 py-10 sm:py-20 text-center text-white px-4 sm:px-6 fade-in shadow-3xl">
+    <h2 class="text-4xl sm:text-6xl font-extrabold mb-4 sm:mb-8 animate-bounce">
+        Pronta para a Mudança?
+    </h2>
+    <p class="text-base sm:text-xl md:text-2xl mb-6 sm:mb-10">
+        De <span class="line-through text-red-300 text-xl sm:text-2xl">R$49,90</span> por
+        <span class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-yellow-300">R$11,90</span> apenas hoje!
+    </p>
+    <a href="https://pay.kiwify.com.br/lFirxl2"
+       class="bg-yellow-400 text-gray-800 py-3 sm:py-5 px-8 sm:px-20 rounded-full text-xl sm:text-3xl font-bold hover:bg-yellow-500 transition-all shadow-3xl transform hover:scale-110">
+        🚀 COMPRAR AGORA
+    </a>
+    <p class="mt-6 text-xs sm:text-sm md:text-base text-yellow-200">
+        Pagamento 100% seguro via PIX, cartão e boleto.
+    </p>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-20 px-6 fade-in">
+    <h2 class="text-4xl text-center font-bold text-green-800 mb-10">Perguntas Frequentes</h2>
+    <div class="max-w-3xl mx-auto space-y-6">
+        <details class="bg-white p-6 rounded-lg shadow-xl">
+            <summary class="font-semibold text-xl cursor-pointer">Para quem é este eBook?</summary>
+            <p class="mt-3 text-lg">Para mulheres com 40+ que buscam emagrecer de forma saudável e sustentável, sem
+                sacrifícios extremos.</p>
+        </details>
+        <details class="bg-white p-6 rounded-lg shadow-xl">
+            <summary class="font-semibold text-xl cursor-pointer">Preciso de academia?</summary>
+            <p class="mt-3 text-lg">Não. Todos os exercícios são adaptados para serem feitos em casa, sem equipamentos
+                caros.</p>
+        </details>
+        <details class="bg-white p-6 rounded-lg shadow-xl">
+            <summary class="font-semibold text-xl cursor-pointer">Quando verei os resultados?</summary>
+            <p class="mt-3 text-lg">A maioria das usuárias nota mudanças em 4 a 8 semanas, ao seguir o método
+                corretamente.</p>
+        </details>
+    </div>
+</section>
+
+</body>
+</html>
